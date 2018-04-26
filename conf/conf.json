@@ -1,0 +1,22 @@
+{
+  "clientMinPingIntervalInSec": 60,
+  "serverSendHeartbeatIntervalInSec": 10,
+  "http-port": 5080,
+  "adminService": {
+    "host": "localhost",
+    "port": 8080
+  },
+  "publishMethod":"gatewayToLambda",
+
+  "scorePublisherDetails":{
+    "gatewayPublisher.host":"fuze.tikal.io",
+    "gatewayPublisher.uri":"/hitTrials",
+
+    "gatewayToKinesis.host":"yvayy162p9.execute-api.us-west-2.amazonaws.com",
+    "gatewayToKinesis.uri":"/dev/",
+
+    "kinesisPublisher.region":"us-west-2",
+    "kinesisPublisher.kinesisStreamName":"Ants-Smashing-HitTrials",
+    "kinesisPublisher.partitionKey":"antId"
+  }
+}
